@@ -63,7 +63,7 @@ void deleteNode(int data) {
 
 int search(int data) {
 	struct Node* temp = head;
-	while (temp->next != NULL) {
+	while (temp != NULL) {
 		if (temp->data == data) {
 			return 1;
 		}
@@ -102,7 +102,7 @@ void main() {
 	deleteNode(3);
 	traverse(head);
 
-	if (search(3)) {
+	if (search(5)) {
 		printf("Item exists in linked list.");
 	} else {
 		printf("Item doesn't exist in linked list.");
